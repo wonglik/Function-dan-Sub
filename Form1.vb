@@ -13,7 +13,8 @@
     End Sub
 
     Private Sub btnPapar2_Click(sender As Object, e As EventArgs) Handles btnPapar2.Click
-        S2(txtBox1.Text)
+        Dim strNama As String = txtBox1.Text
+        S2(strNama)
     End Sub
 
     Private Function F1()
