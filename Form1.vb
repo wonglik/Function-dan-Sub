@@ -8,13 +8,14 @@
         S1()
     End Sub
 
-    Private Sub S2(ByVal strText As String)
-        lblResult2.Text = strText
+    Private Sub S2(ByRef strText As String)
+        strText = "Hello " & strText
     End Sub
 
     Private Sub btnPapar2_Click(sender As Object, e As EventArgs) Handles btnPapar2.Click
-        Dim strNama As String = txtBox1.Text
-        S2(strNama)
+        Dim strText As String = txtBox1.Text
+        S2(strText)
+        lblResult2.Text = strText
     End Sub
 
     Private Function F1()
